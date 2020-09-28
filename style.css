@@ -19,16 +19,33 @@ body {
     margin: 30px, 30px, 30px, 30px;
     padding: 30px;
   }
+
+
+
 /* TOP OF PAGE */
 
   .top-image {
-      
-      background-color: #414143;
-      border: #0C9CDA;
+      display: grid;
+      grid-template-columns: repeat(5, 20%);
+      grid-template-rows: 10% 10% 30% 20% 5% 15% 10%;
+      background-image: url(img/SaoTomé_Principe_19_141127.jpg) ;
+      filter: grayscale(100%);
+      background-repeat: none;
+      background-size: cover;
+      width: 100%;
       margin-bottom: 20px;
+      align-items: center;
       text-align: center;
-      
   }
+
+.Picture {
+    grid-area: 1 / 2 / 4 / 5;
+    border: 10px solid white;
+    border-radius: 50%;
+    width: 140px;
+    filter: none;
+
+}
 
   /* END TOP OF PAGE */
 
@@ -80,31 +97,29 @@ body {
 
 /* START SKILLS */
 
-    .skills {
-        border: 5px solid #0C9CDA;
-        padding: 15px;
-        margin-top: 20px;
-
-}
-
-.skills h2 {
-    text-align: center;
-    padding:-20px
-}
-
     .containerskills {
         display: grid;
         grid-template-columns: 1fr 20px 1fr;
-        background-color: teal;
+        grid-template-rows: 50px 20px 3fr;
+        border: 5px solid #0C9CDA;
+        padding: 15px;
+        margin-top: 20px;
+}
+
+    .skillstitle {
+        grid-area: 1 / 1 / 4 / 4;
+        text-align: center;
+
     }
 
     .technical {
-        grid-column-start: 1 ;
+        grid-area: 3 / 1 / 3 / 2;
         background-color: purple;
+
     }
 
     .Personal {
-        grid-column-end: 1;
+        grid-area: 3 / 3 / 3 / 4;
         background-color: yellow;
     }
 
@@ -164,3 +179,81 @@ body {
     }
 
   /* END OF REST */
+
+/* MEDIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
+
+@media screen and (max-width: 768px) {
+    /* For mobile phones: */
+
+    /* BIO */ 
+
+    .grid-biolanguage {
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 20px 1fr 20px 1fr;
+        font-size: 8px;
+    }
+    
+    .bio {
+     background-color: black;
+      padding:15px;
+      grid-area: 1 / 1;
+        }
+
+    .languageforpax {
+        background-color: purple;
+        padding:5px;
+        grid-area: 3 /1;
+      }
+
+    .languageformachine {
+        background-color: orangered;
+        padding:5px;
+        grid-area: 5 /1;
+      }
+
+      /* SKILLS */
+
+    .containerskills {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 20px 1fr;
+    }
+
+      .technical {
+        grid-area: 1 / 1;
+        background-color: blue;
+      }
+
+      .Personal {
+        grid-area: 3 / 1;
+        background-color: purple;
+
+      }
+
+        .grid-rest {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 20px 1fr 20px 1fr 20px 1fr;
+    
+      }
+    
+      .bloc1 {
+          grid-area: 1 / 1;
+          background-color: #0C9CDA;
+          color:white;
+          
+      }
+    
+      .bloc2 {
+        grid-area: 3 / 1;
+
+    }
+
+        .bloc3 {
+        grid-area: 5 / 1 ;
+
+    }
+        .bloc4 {
+        grid-area: 7 / 1 ;
+
+        }
+      
+}
